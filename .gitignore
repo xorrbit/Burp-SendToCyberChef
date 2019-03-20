@@ -1,0 +1,6 @@
+build/*
+
+*.class
+
+src/burp/I*
+
