@@ -50,7 +50,7 @@ public class BurpExtender implements IBurpExtender, IContextMenuFactory
     }
 
     private void doit(String selectedText) {
-        StringBuilder url = new StringBuilder("https://gchq.github.io/CyberChef/#input=");
+        StringBuilder url = new StringBuilder("https://gchq.github.io/CyberChef/#recipe=Magic(3,false,false,'')&input=");
         url.append(helpers.base64Encode(selectedText).replace("=", ""));
 
         if (Desktop.isDesktopSupported() && Desktop.getDesktop().isSupported(Desktop.Action.BROWSE)) {
