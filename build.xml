@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="Burp-SendToCyberChef" default="build jar">
   <property environment="env"/>
-	<target name="build jar" depends="compile java">
-	  <zip destfile="Burp-SendToCyberChef.jar">
-			<fileset dir="build">
+  <target name="build jar" depends="compile java">
+    <zip destfile="Burp-SendToCyberChef.jar">
+      <fileset dir="build">
         <include name="burp/BurpExtender*.class"/>
-			</fileset>
-		</zip>
-	</target>
-	<target name="compile java">
-		<mkdir dir="build"/>
+      </fileset>
+    </zip>
+  </target>
+  <target name="compile java">
+    <mkdir dir="build"/>
     <javac srcdir="src" destdir="build" includeantruntime="false"/>
-	</target>
-	<target name="clean">
+  </target>
+  <target name="clean">
     <delete dir="build"/>
-		<delete file="Burp-SendToCyberChef.jar"/>
-	</target>
+    <delete file="Burp-SendToCyberChef.jar"/>
+  </target>
 </project>
